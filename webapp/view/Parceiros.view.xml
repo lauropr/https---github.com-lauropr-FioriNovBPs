@@ -1,0 +1,49 @@
+<mvc:View controllerName="fiorinov.bp.controller.Parceiros"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <Table id="parceiros"
+               items="{/I_BusinessPartner}"   
+               growing="true"
+               growingThreshold="100" > 
+            <headerToolbar>
+                <Toolbar >
+                    <content>
+                        <SearchField width="50%" liveChange=".aoPesquisarParceiro" />
+                    </content>                    
+                </Toolbar>
+            </headerToolbar>
+
+
+            <columns>
+                <Column>
+                    <Text text="{i18n>txtIdParceiro}" />
+                </Column>
+                <Column>
+                    <Text text="{i18n>txtTipoParceiro}" />
+                </Column>
+                <Column>
+                    <Text text="{i18n>txtNomeParceiro}" />
+                </Column>
+            </columns>
+            <items>
+                <ColumnListItem >
+                    <Text text="{BusinessPartner}" />
+                    <Text text="{BusinessPartnerCategory}" />
+                    <Text text="{ parts: [
+                                    { path: 'BusinessPartnerCategory' },
+                                    { path: 'FirstName' },
+                                    { path: 'LastName'},
+                                    { path: 'OrganizationBPName1' },
+                                    { path: 'OrganizationBPName2' }
+                                  ],
+                                  formatter: '.formatter.formataDescricao'
+                                }" />
+                </ColumnListItem>
+            </items>
+        </Table>
+
+
+
+    </Page>
+</mvc:View>
