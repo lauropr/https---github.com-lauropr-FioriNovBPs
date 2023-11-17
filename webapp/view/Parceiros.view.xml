@@ -5,7 +5,9 @@
         <Table id="parceiros"
                items="{/I_BusinessPartner}"   
                growing="true"
-               growingThreshold="100" > 
+               growingThreshold="100"
+               mode="SingleSelectMaster"
+               itemPress=".aoPressionarItem" > 
             <headerToolbar>
                 <Toolbar >
                     <content>
@@ -13,8 +15,6 @@
                     </content>                    
                 </Toolbar>
             </headerToolbar>
-
-
             <columns>
                 <Column>
                     <Text text="{i18n>txtIdParceiro}" />
@@ -27,7 +27,7 @@
                 </Column>
             </columns>
             <items>
-                <ColumnListItem >
+                <ColumnListItem type="Active">
                     <Text text="{BusinessPartner}" />
                     <Text text="{BusinessPartnerCategory}" />
                     <Text text="{ parts: [

@@ -43,7 +43,19 @@ sap.ui.define([
                 aFiltros.push(oFiltro);
                 
                 oBinding.filter(aFiltros);
-            }
+            },
+
+            aoPressionarItem: function(oEvent){
+                //resgata o item clicado
+                var oItem = oEvent.getParameter('listItem');
+
+                //acessa o contexto de vínculo do item clicado com o modelo (modelo OData)
+                //getBinding() não tem nenhum argumento pois nosso modelo é o principal, sem nome 
+                var oItemClicadoNoModelo = oItem.getBindingContext().getObject();
+                var sParceiro = oItemClicadoNoModelo.BusinessPartner;
+
+
+            }   
 
         });
     });
