@@ -1,0 +1,69 @@
+<mvc:View controllerName="fiorinov.bp.controller.Detalhe"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form">
+    <Page id="page">
+        <customHeader>
+            <Toolbar>
+                <ObjectIdentifier title="{PartnerName1}"
+                                  text="{PartnerId}"/>
+            </Toolbar>
+        </customHeader>
+		<f:SimpleForm id="FormParceiro"
+			layout="ResponsiveGridLayout"
+			title="Informações Gerais"
+			labelSpanXL="3"
+			labelSpanL="3"
+			labelSpanM="3"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="4"
+			emptySpanL="4"
+			emptySpanM="4"
+			emptySpanS="0"
+			columnsXL="1"
+			columnsL="1"
+			columnsM="1"
+			singleContainerFullSize="false" >
+            <f:toolbar>
+                <Toolbar >
+                    <ToolbarSpacer />
+                    <Button text="Editar" type="Emphasized" visible="{exibicao>/visivel}" press=".aoEditar" />
+                    <Button text="Salvar" type="Emphasized" visible="{edicao>/visivel}" press=".aoSalvar" />
+                    <Button text="Cancelar" type="Reject" visible="{edicao>/visivel}"  press=".aoCancelar" />
+                </Toolbar>
+            </f:toolbar>
+
+
+			<f:content>
+				<Label text="Nome 1" />
+				<Input id="nome1" value="{PartnerName1}" editable="{modo>/editavel}" />
+
+                <Label text="Nome 2" />
+				<Input value="{PartnerName2}" editable="{modo>/editavel}" />
+
+				<Label text="Termo de Pesquisa 1" />
+				<Input value="{SearchTerm1}" editable="{modo>/editavel}" />
+
+                <Label text="Rua" />
+				<Input value="{Street}" editable="{modo>/editavel}" />
+
+                <Label text="Nº" />
+				<Input value="{HouseNumber}" editable="{modo>/editavel}" />
+
+                <Label text="Bairro" />
+				<Input value="{District}" editable="{modo>/editavel}" />
+
+                <Label text="Cidade" />
+				<Input value="{City}" editable="{modo>/editavel}" />
+
+                <Label text="Estado" />
+				<Input value="{Region}" editable="{modo>/editavel}" />
+
+                <Label text="País" />
+				<Input value="{Country}" editable="{modo>/editavel}" />
+			</f:content>
+		</f:SimpleForm>
+
+    </Page>
+</mvc:View>

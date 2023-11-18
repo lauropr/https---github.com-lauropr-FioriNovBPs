@@ -54,6 +54,13 @@ sap.ui.define([
                 var oItemClicadoNoModelo = oItem.getBindingContext().getObject();
                 var sParceiro = oItemClicadoNoModelo.BusinessPartner;
 
+                //resgata o roteador
+                var oRoteador = this.getOwnerComponent().getRouter();
+
+                //navegar para a página de detalhe do parceiro
+                oRoteador.navTo("RotaDetalhe", {
+                    parceiro: sParceiro
+                });
 
             }   
 

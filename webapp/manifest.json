@@ -90,10 +90,9 @@
         "viewType": "XML",
         "async": true,
         "viewPath": "fiorinov.bp.view", 
-        "controlId": "app",
-        "controlAggregation": "pages",
-        "clearControlAggregation": false
-      },
+        "controlId": "fcl",
+        "transition": "slide"
+      } ,
       "routes": [
         {
           "name": "RouteParceiros",
@@ -101,16 +100,29 @@
           "target": [
             "TargetParceiros"
           ]
+        },
+        {
+          "name": "RotaDetalhe",
+          "pattern": "parceiro/{parceiro}",
+          "target": [
+            "TargetParceiros",
+            "TargetDetalhe"
+          ]
         }
       ],
       "targets": {
         "TargetParceiros": {
           "viewType": "XML",
-          "transition": "slide",
-          "clearControlAggregation": false,
           "viewId": "Parceiros",
-          "viewName": "Parceiros"
-        }
+          "viewName": "Parceiros",
+          "controlAggregation": "beginColumnPages"
+        },
+        "TargetDetalhe": {
+          "viewType": "XML",
+          "viewId": "Detalhe",
+          "viewName": "Detalhe",
+          "controlAggregation": "midColumnPages"
+        }        
       }
     },
     "rootView": {

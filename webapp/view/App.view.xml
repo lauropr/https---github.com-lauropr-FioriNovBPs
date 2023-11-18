@@ -3,6 +3,6 @@
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.f">
     <m:App id="app">
-
+        <FlexibleColumnLayout id='fcl' layout="{layout>/modoDeExibicao}" />        
     </m:App>
 </mvc:View>
