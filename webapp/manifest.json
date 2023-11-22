@@ -24,6 +24,10 @@
           "localUri": "localService/metadata.xml",
           "odataVersion": "2.0"
         }
+      },
+      "novoParceiro": {
+        "uri": "model/novoParceiro.json",
+        "type": "JSON"
       }
     }
   },
@@ -75,6 +79,11 @@
         "settings": {
           "useBatch": false
         }
+      },
+      "novoParceiro": {
+        "dataSource": "novoParceiro",
+        "type": "sap.ui.model.json.JSONModel",
+        "preload": true
       }
     },
     "resources": {
@@ -108,7 +117,15 @@
             "TargetParceiros",
             "TargetDetalhe"
           ]
+        },
+        {
+          "name": "RotaNovoParceiro",
+          "pattern": "novo",
+          "target": [
+            "TargetNovoParceiro"
+          ]
         }
+
       ],
       "targets": {
         "TargetParceiros": {
@@ -121,6 +138,12 @@
           "viewType": "XML",
           "viewId": "Detalhe",
           "viewName": "Detalhe",
+          "controlAggregation": "midColumnPages"
+        },
+        "TargetNovoParceiro": {
+          "viewType": "XML",
+          "viewId": "NovoParceiro",
+          "viewName": "NovoParceiro",
           "controlAggregation": "midColumnPages"
         }        
       }

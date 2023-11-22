@@ -1,0 +1,18 @@
+{
+    "categorias": [
+        { "id": "1", "texto": "Pessoa" },
+        { "id": "2", "texto": "Empresa"  }
+    ],
+    "categoria": "",
+    "nome1": "",
+    "nome2": "",
+    "termoPesquisa1": "",
+    "termoPesquisa2": "",
+    "rua": "",
+    "numero": "",
+    "bairro": "",
+    "cidade": "",
+    "estado": "",
+    "cep": "",
+    "pais": "" 
+}

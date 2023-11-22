@@ -62,7 +62,17 @@ sap.ui.define([
                     parceiro: sParceiro
                 });
 
-            }   
+            },
+            
+            aoCriarParceiro: function(oEvent){
+                //resgata o Roteador do Component.js
+                var oRoteador = this.getOwnerComponent().getRouter();
+
+                //efetuar a chamada da rota Novo parceiro
+                oRoteador.navTo("RotaNovoParceiro");
+            }
+            
+
 
         });
     });

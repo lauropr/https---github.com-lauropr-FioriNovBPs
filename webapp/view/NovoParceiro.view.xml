@@ -1,0 +1,6 @@
+<mvc:View xmlns:m="sap.m" controllerName="fiorinov.bp.controller.NovoParceiro"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.f">
+    <m:Page id="paginaNovoParceiro" />
+</mvc:View>

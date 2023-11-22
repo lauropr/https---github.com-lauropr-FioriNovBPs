@@ -68,9 +68,11 @@ sap.ui.define([
                 var sLayout;
 
                 switch(sNomeDaRota){
+                    case "RotaNovoParceiro":
                     case "RotaDetalhe":
                         sLayout = "TwoColumnsMidExpanded";
                         break;
+                    //Dois cases funcionam como um "ou"
                     case "RouteParceiros":
                         sLayout = "OneColumn";
                         break;

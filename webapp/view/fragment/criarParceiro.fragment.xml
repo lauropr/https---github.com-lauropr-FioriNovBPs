@@ -1,0 +1,78 @@
+<core:FragmentDefinition
+   xmlns="sap.m"
+   xmlns:f="sap.ui.layout.form"
+   xmlns:core="sap.ui.core">
+
+   <f:SimpleForm id="FormParceiro"
+   layout="ResponsiveGridLayout"
+   title="Novo Parceiro"
+   labelSpanXL="3"
+   labelSpanL="3"
+   labelSpanM="3"
+   labelSpanS="12"
+   adjustLabelSpan="false"
+   emptySpanXL="4"
+   emptySpanL="4"
+   emptySpanM="4"
+   emptySpanS="0"
+   columnsXL="1"
+   columnsL="1"
+   columnsM="1"
+   singleContainerFullSize="false" >
+   <f:toolbar>
+       <Toolbar >
+           <ToolbarSpacer />
+           <Button text="Salvar" type="Emphasized"  press=".aoCriar" />
+           <Button text="Cancelar" type="Reject" press=".aoCancelar" />
+       </Toolbar>
+   </f:toolbar>
+
+   <f:content>
+
+        <Label text="Categoria" />
+        <!-- <Select forceSelection="false"
+                selectedKey="2">
+            <core:Item key="1" text="Pessoa" />
+            <core:Item key="2" text="Empresa" />
+        </Select> -->
+        <Select forceSelection="true"
+                items="{novoParceiro>/categorias}"
+                change=".aoEscolherCategoria" >
+            <core:Item key="{novoParceiro>id}" text="{novoParceiro>texto}" />
+        </Select>
+
+       <Label text="Nome 1" />
+       <Input value="{novoParceiro>/nome1}" />
+
+       <Label text="Nome 2" />
+       <Input value="{novoParceiro>/nome2}"  />
+
+       <Label text="Termo de Pesquisa 1" />
+       <Input value="{novoParceiro>/termoPesquisa1}"  />
+
+       <Label text="Termo de Pesquisa 2" />
+       <Input value="{novoParceiro>/termoPesquisa2}"  /> 
+
+       <Label text="Rua" />
+       <Input value="{novoParceiro>/rua}"  />
+
+       <Label text="Nº" />
+       <Input value="{novoParceiro>/numero}"  />
+
+       <Label text="Bairro" />
+       <Input value="{novoParceiro>/bairro}"  />
+
+       <Label text="Cidade" />
+       <Input value="{novoParceiro>/cidade}"  />
+
+        <Label text="CEP" />
+        <Input value="{novoParceiro>/cep}"  />
+ 
+       <Label text="Estado" />
+       <Input value="{novoParceiro>/estado}"  />
+
+       <Label text="País" />
+       <Input value="{novoParceiro>/pais}"  />
+   </f:content>
+</f:SimpleForm>
+</core:FragmentDefinition>
